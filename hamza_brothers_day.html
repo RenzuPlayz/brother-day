@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d27">
+<title>For Hamza 💙 — From Your Sister by Heart</title>
+<style>
+:root{--bg:#100d27;--purple:#7865ff;--pink:#ff8fbe;--white:#fffaff;--muted:#c7c0e7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 20%,#6c4dff33,transparent 45%),radial-gradient(ellipse at 85% 70%,#ff70b522,transparent 40%),#100d27}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.45;animation:twinkle var(--t) ease-in-out infinite alternate}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:35px 18px 55px;position:relative;isolation:isolate;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1;animation:float 7s ease-in-out infinite}
+.orb.one{width:240px;height:240px;left:-100px;top:12%;background:radial-gradient(circle,#8b5cff45,transparent 70%)}
+.orb.two{width:300px;height:300px;right:-130px;bottom:5%;background:radial-gradient(circle,#ff70b533,transparent 70%);animation-delay:-3s}
+.content{width:min(100%,680px);animation:rise 1s both}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid #ffffff2c;background:#ffffff0b;border-radius:99px;color:#e8e1ff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(10px)}
+.pulse-dot{width:7px;height:7px;border-radius:50%;background:#ff8fbe;box-shadow:0 0 13px #ff8fbe;animation:blink 1.2s infinite}
+.big-heart{font-size:clamp(66px,17vw,112px);margin:24px 0 12px;display:inline-block;filter:drop-shadow(0 0 25px #ff79b85c);animation:heartbeat 1.7s infinite}
+h1{font-size:clamp(2.9rem,12vw,6.4rem);letter-spacing:-.075em;line-height:.98;margin:0;font-weight:900}
+.gradient{background:linear-gradient(100deg,#fff 5%,#ffb7d5 42%,#a69aff 90%);background-size:200% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:shine 5s linear infinite}
+.hero p{color:var(--muted);line-height:1.8;max-width:480px;margin:24px auto 27px;font-size:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 22px;border:1px solid #ffffff2b;border-radius:16px;background:linear-gradient(115deg,#806bff,#a16eff 55%,#ff83ba);color:white;font:inherit;font-weight:800;text-decoration:none;box-shadow:0 12px 35px #795cff3b;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 17px 40px #795cff5c}
+.arrow{display:inline-block;animation:bob 1s infinite}
+.scroll{position:absolute;bottom:20px;color:#a9a0d0;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase}
+.scroll span{display:block;margin-top:8px;animation:bob 1.3s infinite}
+section{padding:76px 18px}
+.wrap{width:min(100%,760px);margin:auto}
+.kicker{color:#ff9bc5;text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;font-weight:850}
+h2{font-size:clamp(2rem,7vw,3.1rem);letter-spacing:-.055em;line-height:1.08;margin:12px 0 15px}
+.sub{color:var(--muted);line-height:1.85;margin:0}
+.glass{margin-top:28px;padding:clamp(23px,6vw,40px);border-radius:28px;border:1px solid #ffffff1e;background:linear-gradient(140deg,#ffffff0d,#ffffff05);box-shadow:0 25px 80px #05031135;backdrop-filter:blur(14px);position:relative;overflow:hidden}
+.glass:before{content:"“";position:absolute;right:12px;top:-34px;font-size:150px;color:#ffffff08;font-family:Georgia,serif}
+.glass p{position:relative;color:#e8e2ff;line-height:2;margin:0 0 15px}
+.glass p:last-of-type{margin-bottom:0}
+.sign{margin-top:24px;color:#ffadd0;font-weight:850}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.mini{border:1px solid #ffffff16;border-radius:20px;padding:20px 8px;text-align:center;background:#ffffff07;transition:transform .25s,border-color .25s}
+.mini:hover{transform:translateY(-5px);border-color:#b5a0ff88}
+.mini .emoji{font-size:1.8rem;display:block;margin-bottom:10px}
+.mini strong{font-size:.88rem;display:block}
+.mini small{display:block;color:#aaa2cf;font-size:.72rem;margin-top:6px}
+.surprise{text-align:center;background:linear-gradient(180deg,transparent,#7865ff0d,transparent)}
+.surprise .wrap{border:1px solid #ffffff1c;border-radius:30px;padding:clamp(25px,7vw,48px) 18px;background:linear-gradient(145deg,#ffffff0b,#ffffff03)}
+.gift{font-size:3rem;display:block;animation:float 3s ease-in-out infinite;margin-bottom:12px}
+.reveal{display:none;max-width:520px;margin:24px auto 0;padding:24px 20px;border:1px solid #ffb5d84d;border-radius:22px;background:linear-gradient(135deg,#ff8fbe15,#7865ff18);line-height:1.9;animation:rise .45s both}
+.reveal.show{display:block}
+.reveal .hug{font-size:2.6rem}
+footer{text-align:center;padding:30px 16px 38px;border-top:1px solid #ffffff12;color:#a49bbf;font-size:.82rem;line-height:1.9}
+footer b{color:#ff9bc5}
+.float{position:fixed;pointer-events:none;z-index:9;animation:fly 2.1s ease-out forwards}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(1)}36%{transform:scale(1.06)}}
+@keyframes shine{to{background-position:200% center}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes twinkle{from{opacity:.15;transform:scale(.7)}to{opacity:.8;transform:scale(1.4)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes bob{50%{transform:translateY(5px)}}
+@keyframes fly{to{transform:translateY(-160px) rotate(35deg) scale(1.3);opacity:0}}
+@media(max-width:420px){section{padding:58px 16px}.cards{gap:7px}.mini{padding:16px 4px}.mini strong{font-size:.78rem}.mini small{font-size:.67rem}.hero p{font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="stars" aria-hidden="true"></div>
+<main>
+<header class="hero">
+  <div class="orb one"></div><div class="orb two"></div>
+  <div class="content">
+    <div class="badge"><span class="pulse-dot"></span> A special page from your sister</div>
+    <div class="big-heart" aria-hidden="true">💙</div>
+    <h1>Happy<br><span class="gradient">Brother's Day</span></h1>
+    <p>Har rishta khoon ka nahi hota. Kuch rishte dil se bante hain — aur tum mere liye unhi mein se ho, Hamza.</p>
+    <a class="btn" href="#message">A message for you <span class="arrow">↓</span></a>
+  </div>
+  <div class="scroll">Scroll to feel the love <span>⌄</span></div>
+</header>
+<section id="message">
+  <div class="wrap">
+    <div class="kicker">Dear Hamza ✉️</div>
+    <h2>Friend by chance.<br><span class="gradient">Bhai by heart.</span></h2>
+    <p class="sub">Kuch log dost ban kar zindagi mein aate hain aur dheere dheere family ban jaate hain. Tum mere liye bilkul waise hi ho.</p>
+    <div class="glass">
+      <p>Hamza, tu sirf mera dost nahi, mere liye bilkul sage bhai jaisa hai. Teri behen ki taraf se dher sara pyaar. ❤️</p>
+      <p>Life mein aise log bohat kam milte hain jin ke saath insaan bina kisi formality ke apna asli self reh sake. Main bohat khush-qismat hoon ke tum meri life mein ho.</p>
+      <p>Chahe hum ek hi family mein paida nahi hue, lekin tum mere liye bhai se kam nahi ho. Dua hai tumhari life hamesha khushiyon, success, sukoon aur achhe logon se bhari rahe.</p>
+      <p>Hamesha khush rehna, apne dreams poore karna, aur yaad rakhna — tumhari behen jaisi dost hamesha tumhare liye dua karegi aur tumhare saath khari rahegi. 🤝💗</p>
+      <div class="sign">Happy Brother's Day, Hamza! — From your sister by heart 💙</div>
+    </div>
+    <div class="cards">
+      <div class="mini"><span class="emoji">🤝</span><strong>Brotherhood</strong><small>Beyond blood</small></div>
+      <div class="mini"><span class="emoji">😂</span><strong>Good Vibes</strong><small>Endless memories</small></div>
+      <div class="mini"><span class="emoji">🌟</span><strong>Big Dreams</strong><small>Always cheering</small></div>
+    </div>
+  </div>
+</section>
+<section class="surprise">
+  <div class="wrap">
+    <span class="gift">🎁</span>
+    <div class="kicker">One last thing</div>
+    <h2>A tiny surprise<br>for my brother</h2>
+    <p class="sub">Tap the button. This one's just for you, Hamza.</p>
+    <button class="btn" id="surpriseBtn" type="button">Open your surprise 💙</button>
+    <div class="reveal" id="surpriseMessage" aria-live="polite">
+      <div class="hug">🫂💙✨</div>
+      <strong>Oye Hamza!</strong><br>
+      Dosti apni jagah, lekin tum mere liye bhai ho — aur main tumhari behen jaisi. 😂❤️<br>
+      Allah kare tum hamesha haste raho, tarakki karo aur kabhi akela feel na karo. Tumhari behen jaisi dost hamesha tumhare liye dua-go hai.<br>
+      <strong>You're not just a friend — you're my brother by heart! 💗</strong>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Made with sisterly love <b>♥</b>, especially for Hamza<br>From your sister by heart, always. 💙</footer>
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<65;i++){
+  const s=document.createElement('span');s.className='star';
+  s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+  s.style.setProperty('--t',(1.5+Math.random()*3)+'s');s.style.animationDelay=(-Math.random()*4)+'s';
+  stars.appendChild(s);
+}
+const button=document.getElementById('surpriseBtn');
+const message=document.getElementById('surpriseMessage');
+button.addEventListener('click',()=>{
+  const open=message.classList.toggle('show');
+  button.textContent=open?'Surprise opened 💙':'Open your surprise 💙';
+  if(open){
+    for(let i=0;i<28;i++){
+      const el=document.createElement('span');el.className='float';
+      el.textContent=['💙','💖','✨','🤍','💫'][Math.floor(Math.random()*5)];
+      el.style.left=(5+Math.random()*90)+'vw';el.style.top=(45+Math.random()*45)+'vh';
+      el.style.fontSize=(15+Math.random()*20)+'px';document.body.appendChild(el);
+      setTimeout(()=>el.remove(),2200);
+    }
+  }
+});
+</script>
+</body>
+</html>
